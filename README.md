@@ -9,14 +9,6 @@ Flask app running on your Raspberry Pi. No MQTT broker required.
 
 ---
 
-## Installation
-
-[![Add Integration](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=xantech)
-
-> **Note:** The button above requires [My Home Assistant](https://my.home-assistant.io/) to be set up (links your HA instance to the my.home-assistant.io redirect service). If you haven't set that up, follow the manual steps below.
-
----
-
 ## Requirements
 
 - Home Assistant (2023.6 or later)
@@ -24,26 +16,35 @@ Flask app running on your Raspberry Pi. No MQTT broker required.
 
 ---
 
-## Manual Installation
+## Installation
 
-1. Copy the `custom_components/xantech/` folder into your Home Assistant
-   configuration directory so the path looks like:
+**Step 1 — Copy the integration files**
 
-   ```
-   <ha_config_dir>/custom_components/xantech/
-   ```
+Copy the `custom_components/xantech/` folder into your Home Assistant
+configuration directory so the path looks like:
 
-   On most installations `<ha_config_dir>` is `/config` (inside the container)
-   or the folder that contains your `configuration.yaml`.
+```
+<ha_config_dir>/custom_components/xantech/
+```
 
-2. Restart Home Assistant.
+On most installations `<ha_config_dir>` is `/config` (inside the container)
+or the folder that contains your `configuration.yaml`.
 
-3. Go to **Settings → Devices & Services → Add Integration**.
+**Step 2 — Restart Home Assistant**
 
-4. Search for **Xantech Audio** and click it.
+The integration will not appear until HA is restarted.
 
-5. Enter the IP address and port of the Raspberry Pi running PyXantech
-   (default port: `5000`). Click **Submit**.
+**Step 3 — Add the integration**
+
+Once HA has restarted, click the button below (requires [My Home Assistant](https://my.home-assistant.io/)):
+
+[![Add Integration](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=xantech)
+
+Or navigate manually: **Settings → Devices & Services → Add Integration** → search for **Xantech Audio**.
+
+**Step 4 — Enter your Pi details**
+
+Enter the IP address and port of the Raspberry Pi running PyXantech (default port: `5000`) and click **Submit**.
 
 Home Assistant will connect to the Flask API, discover all enabled zones,
 and create one `media_player` entity per zone. Zone names come from the
