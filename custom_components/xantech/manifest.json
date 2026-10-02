@@ -1,0 +1,10 @@
+{
+  "domain": "xantech",
+  "name": "Xantech Audio",
+  "version": "1.0.0",
+  "documentation": "https://github.com/carlsteinhilber/smartthings-xantech",
+  "requirements": [],
+  "codeowners": [],
+  "iot_class": "local_polling",
+  "config_flow": true
+}

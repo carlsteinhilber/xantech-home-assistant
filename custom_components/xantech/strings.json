@@ -1,0 +1,21 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to PyXantech",
+        "description": "Enter the IP address and port of the Raspberry Pi running the PyXantech Flask app.",
+        "data": {
+          "host": "Raspberry Pi IP Address",
+          "port": "Flask Port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to PyXantech. Check the IP address and port, and make sure the Flask app is running.",
+      "unknown": "Unexpected error. Check the Home Assistant logs for details."
+    },
+    "abort": {
+      "already_configured": "This PyXantech instance is already configured."
+    }
+  }
+}
